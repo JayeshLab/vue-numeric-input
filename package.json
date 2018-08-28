@@ -29,7 +29,8 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:docs": "webpack --config build/webpack.prod.conf.js",
-    "release": "webpack --hide-modules -p --progress --config build/webpack.release.conf.js"
+    "release": "webpack --hide-modules -p --progress --config build/webpack.release.conf.js",
+    "codecov": "codecov"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
@@ -43,6 +44,7 @@
     "chai": "^4.1.2",
     "chalk": "^2.0.1",
     "clean-webpack-plugin": "^0.1.19",
+    "codecov": "^3.0.4",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.0",
