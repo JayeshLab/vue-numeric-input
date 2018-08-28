@@ -21,6 +21,7 @@
   "bugs": {
     "url": "https://github.com/JayeshLab/vue-numeric-input/issues"
   },
+  "main": "dist/vue-numeric-input.min.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
@@ -101,5 +102,8 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "dependencies": {
+    "vue-numeric": "^2.3.0"
+  }
 }

@@ -18,7 +18,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     umdNamedDefine: true
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname , '..'), verbose: true })
+    new CleanWebpackPlugin(['dist'], { root: path.resolve(__dirname , '..'), verbose: true }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: {
+          warnings: false
+        }
+      }
+    })
   ],
   performance: {
     hints: false
