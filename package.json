@@ -4,6 +4,16 @@
   "description": "Vue Numeric Input Component",
   "author": "JayeshLab <helloiamjayesh@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "input",
+    "text",
+    "component",
+    "number",
+    "numeric",
+    "vue",
+    "vue.js"
+  ],
+  "homepage": "https://github.com/JayeshLab/vue-numeric-input/#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JayeshLab/vue-numeric-input.git"
@@ -19,9 +29,6 @@
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:docs": "webpack --config build/webpack.prod.conf.js",
     "release": "webpack --hide-modules -p --progress --config build/webpack.release.conf.js"
-  },
-  "dependencies": {
-    "vue": "^2.5.17"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
@@ -77,6 +84,7 @@
     "sinon-chai": "^2.8.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^1.1.1",
+    "vue": "^2.5.17",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
