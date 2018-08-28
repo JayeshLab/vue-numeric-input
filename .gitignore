@@ -3,3 +3,5 @@ node_modules/
 *.map
 /test/unit/coverage/
 package-lock.json
+.idea/
+*.iml
