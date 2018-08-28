@@ -281,13 +281,7 @@ export default {
   },
   data () {
     return {
-      num: 10,
-      num1: 22
-    }
-  },
-  methods: {
-    focusMethod () {
-      this.$refs.numeric.focus()
+      num: 10
     }
   }
 }

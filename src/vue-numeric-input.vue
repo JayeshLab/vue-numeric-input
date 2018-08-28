@@ -268,7 +268,18 @@ export default {
     position: relative;
     display: inline-block;
     box-sizing: border-box;
-    font-size: 16px;
+  }
+  .vue-numeric-input .numeric-input {
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    box-sizing: border-box;
+    font-size: inherit;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    display: block;
+    line-height: 1.5rem;
+    transition: all 0.1s ease 0s;
+    width: 100%;
   }
   .vue-numeric-input .btn {
     position: absolute;
@@ -290,18 +301,6 @@ export default {
      opacity: 0.5;
      box-shadow: none;
      cursor: not-allowed;
-  }
-  .vue-numeric-input .numeric-input {
-    padding-right: 1.8rem;
-    padding-left: 1.8rem;
-    box-sizing: border-box;
-    font-size: inherit;
-    border: 1px solid #cccccc;
-    border-radius: 2px;
-    display: block;
-    line-height: 1.5rem;
-    transition: all 0.1s ease 0s;
-    width: 100%;
   }
   .vue-numeric-input .numeric-input.no-control {
     padding: 2px 5px;

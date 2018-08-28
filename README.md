@@ -1,20 +1,28 @@
-## Vue Numeric Input
+# Vue Numeric Input
 
-Number input component based on Vue that is a replacement of native input number which has optional control.
+Number input component based on Vue that is a replacement of native input number with optional control.
 
-![vue-numeric-input](https://user-images.githubusercontent.com/36194663/44716977-6988d380-aad9-11e8-96df-a2605182076d.gif)
+![vue-numeric-input](https://user-images.githubusercontent.com/36194663/44717643-33e4ea00-aadb-11e8-82bf-e1fdeeea3bb5.gif)
 
+[Live Demo](https://jayeshlab.github.io/vue-numeric-input/)
 
-###Installation
+### Installation
 
 Install via NPM
 
 `$ npm install vue-numeric-input --save`
 
+Install via CDN
+
+```
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-numeric-input"></script>
+
+```
 
 #### Global
 
-You may install VueNumericInput globally:
+Register VueNumericInput globally:
 
 ```
 import Vue from 'Vue';
@@ -58,7 +66,7 @@ export default {
 </script>
 ```
 
-### PROPS:
+#### PROPS:
 
 | Name             | Description                 |  Type         |  Default     | Options       |
 | -----------      | ---------------             | ------------  | ------------ | ------------  |
@@ -73,13 +81,12 @@ export default {
 |  precision       |  Number of decimals         | Number        |      0       |   Integer value|
 |  controls        |  Enable/Disable Controls    | Boolean       |    true      |   true/false|
 |  controlsType    |  Controls Type              | String        |  plusminus   |   plusminus/updown|
-|  autofocus       |  Set Autofocus              | Boolean       |    false     |   true/false|
+|  autofocus       |  Autofocus on Page Load     | Boolean       |    false     |   true/false|
 |  readonly        |  Is Readonly                | Boolean       |    false     |   true/false|
 |  disabled        |  Is Disabled                | Boolean       |    false     |   true/false|
 
 
-### EVENTS:
-
+#### EVENTS:
 
 Event Name | Description        | Parameters
 -----------|--------------------|--------------
@@ -88,11 +95,16 @@ change     | triggers when the value changes| (newValue)
 blur       | triggers when Input blurs| (event: Event)
 focus      | triggers when Input focus| (event: Event)
 
-### METHODS:
 
+#### METHODS:
 
 Method | Description | Parameters
 ---|--- | ----
 focus | focus the Input component| -
 blur | blur the Input component| -
 
+Inspired by [react-numeric-input](https://github.com/vlad-ignatov/react-numeric-input)
+
+## License
+
+MIT
