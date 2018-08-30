@@ -20,7 +20,7 @@ Install via NPM
 
 Install via CDN
 
-```
+```html
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/vue-numeric-input"></script>
 
@@ -30,7 +30,7 @@ Install via CDN
 
 Register VueNumericInput globally:
 
-```
+```js
 import Vue from 'Vue';
 import VueNumericInput from 'vue-numeric-input';
 
@@ -41,7 +41,7 @@ Vue.use(VueNumericInput)
 
 Include the VueNumericInput  directly into your component using import:
 
-```
+```js
 import VueNumericInput from 'vue-numeric-input'
 
 export default {
@@ -54,7 +54,7 @@ export default {
 
 #### Basic usage
 
-```
+```html
 <template>
   <div>
     <vue-numeric-input  v-model="value" :min="1" :max="10" :step="2"></vue-numeric-input>
