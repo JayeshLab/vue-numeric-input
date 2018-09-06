@@ -98,6 +98,51 @@
         <p><code>&lt;vue-numeric-input :value="4.367" :step="1.2" :precision="2"&gt;&lt;/vue-numeric-input&gt;</code></p>
         <vue-numeric-input :value="4.367" :step="1.25" :precision="2"></vue-numeric-input>
       </blockquote>
+      <h3 id="styling" data-source-line="75"><a class="anchor" href="#with-float-values"><span class="octicon octicon-link"></span></a>Styling Component</h3>
+      <p data-source-line="76">You can override the styling of the v-numeric-input component by applying !important rule to css properties</p>
+      <vue-numeric-input id="style1" :value="5" :step="1" :min="0" :max="10" size="2.2em" align="center" controls-type="updown"></vue-numeric-input>
+      <br>
+      <br>
+      <blockquote data-source-line="78">
+<pre><code>&lt;vue-numeric-input
+       id="style1"
+       :value="5"
+       :min="0"
+       :max="10"
+       size="60px"
+       controls-type="updown"&gt;
+&lt;/vue-numeric-input&gt;
+&lt;style&gt;
+    #style1.vue-numeric-input.updown {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    #style1.vue-numeric-input.updown .numeric-input {
+      padding-right: 5px !important;
+      padding-left: 5px !important;
+    }
+    #style1.vue-numeric-input.updown .btn {
+      background: #6fbbff !important;
+    }
+    #style1.vue-numeric-input.updown .btn-increment {
+      height: 1.5rem;
+      width: 100%;
+      right: 0 !important;
+      left:0 !important;
+      top: 0 !important;
+      bottom: auto !important;
+    }
+    #style1.vue-numeric-input.updown .btn-decrement {
+      height: 1.5rem;
+      width: 100%;
+      left: 0 !important;
+      right: 0 !important;
+      top: auto !important;
+      bottom: 0 !important;
+    }
+&lt;/style&gt;
+</code></pre>
+      </blockquote>
       <hr>
       <h3><a id="PROPS_69"></a>PROPS:</h3>
       <table class="table table-striped table-bordered">
@@ -286,3 +331,32 @@ export default {
   }
 }
 </script>
+<style>
+  #style1.vue-numeric-input.updown {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  #style1.vue-numeric-input.updown .numeric-input {
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+  }
+  #style1.vue-numeric-input.updown .btn {
+    background: #6fbbff;
+  }
+  #style1.vue-numeric-input.updown .btn-increment {
+    height: 1.5rem;
+    width: 100%;
+    right: 0;
+    left:0;
+    top: 0;
+    bottom: auto;
+  }
+  #style1.vue-numeric-input.updown .btn-decrement {
+    height: 1.5rem;
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+  }
+</style>

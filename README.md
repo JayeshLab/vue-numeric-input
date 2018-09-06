@@ -10,7 +10,7 @@ Number input component based on Vue that is a replacement of native input number
 
 ![vue-numeric-input](https://user-images.githubusercontent.com/36194663/44717643-33e4ea00-aadb-11e8-82bf-e1fdeeea3bb5.gif)
 
-[Live Demo](https://jayeshlab.github.io/vue-numeric-input/)
+[Live Demo & Doc](https://jayeshlab.github.io/vue-numeric-input/)
 
 ### Installation
 
@@ -20,17 +20,16 @@ Install via NPM
 
 Install via CDN
 
-```
+```html
 <script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/vue-numeric-input"></script>
-
 ```
 
 #### Global
 
 Register VueNumericInput globally:
 
-```
+```javascript
 import Vue from 'Vue';
 import VueNumericInput from 'vue-numeric-input';
 
@@ -41,7 +40,7 @@ Vue.use(VueNumericInput)
 
 Include the VueNumericInput  directly into your component using import:
 
-```
+```javascript
 import VueNumericInput from 'vue-numeric-input'
 
 export default {
@@ -54,7 +53,7 @@ export default {
 
 #### Basic usage
 
-```
+```html
 <template>
   <div>
     <vue-numeric-input  v-model="value" :min="1" :max="10" :step="2"></vue-numeric-input>

@@ -239,6 +239,20 @@ describe('VueNumericInput.vue', () => {
     }).$mount()
     expect(vm.$el.style.width).to.be.equal('200px')
   })
+  it('test stop mouse event when called before time interval', () => {
+    const vm = new Vue({
+      template: '<vue-numeric-input ref="numeric" v-model="value"></vue-numeric-input>',
+      data () {
+        return {
+          value: 10
+        }
+      }
+    }).$mount()
+    sinon.spy(vm.$refs.numeric, 'increment')
+    vm.$refs.numeric.start(vm.$refs.numeric.increment)
+    vm.$refs.numeric.stop(new Event('mouseup'))
+    expect(vm.$refs.numeric.increment).to.have.been.called.once
+  })
   it('test focus method', () => {
     const vm = new Vue({
       template: '<vue-numeric-input ref="numeric" v-model="value"></vue-numeric-input>',
@@ -251,7 +265,21 @@ describe('VueNumericInput.vue', () => {
     let input = vm.$el.querySelector('input')
     sinon.spy(input, 'focus')
     vm.$refs.numeric.focus()
-    expect(input.focus).to.have.been.called
+    expect(input.focus).to.have.been.called.once
+  })
+  it('test focus method on disabled', () => {
+    const vm = new Vue({
+      template: '<vue-numeric-input ref="numeric" v-model="value" disabled></vue-numeric-input>',
+      data () {
+        return {
+          value: 10
+        }
+      }
+    }).$mount()
+    let input = vm.$el.querySelector('input')
+    sinon.spy(input, 'focus')
+    vm.$refs.numeric.focus()
+    expect(input.focus).to.not.have.been.called.once
   })
   it('test blur method', () => {
     const vm = new Vue({
