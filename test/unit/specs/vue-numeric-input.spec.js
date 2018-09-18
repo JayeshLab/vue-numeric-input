@@ -200,7 +200,6 @@ describe('VueNumericInput.vue', () => {
       done()
     })
   })
-
   it('align', () => {
     const vm = new Vue({
       template: '<vue-numeric-input v-model="value" align="center"></vue-numeric-input>',
@@ -294,6 +293,19 @@ describe('VueNumericInput.vue', () => {
     sinon.spy(input, 'blur')
     vm.$refs.numeric.blur()
     expect(input.blur).to.have.been.called
+  })
+  it('test beforeDestroy method', () => {
+    const vm = new Vue({
+      template: '<vue-numeric-input ref="numeric" v-model="value"></vue-numeric-input>',
+      data () {
+        return {
+          value: 10
+        }
+      }
+    }).$mount()
+    sinon.spy(window, 'clearInterval')
+    vm.$destroy()
+    expect(window.clearInterval).to.have.been.called
   })
   it('emit focus', () => {
     const vm = new Vue({

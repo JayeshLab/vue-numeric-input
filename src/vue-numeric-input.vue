@@ -250,6 +250,12 @@ export default {
     blur () {
       this.$refs.input.blur()
     }
+  },
+  beforeDestroy () {
+    clearInterval(this.interval)
+    this.interval = null
+    this.handler = null
+    this.startTime = null
   }
 }
 </script>
@@ -259,6 +265,7 @@ export default {
     -webkit-appearance: none;
     margin: 0;
   }
+  input[type=number] {-moz-appearance: textfield;}
   button:focus {
     outline: none;
   }
@@ -284,6 +291,7 @@ export default {
   .vue-numeric-input .btn {
     position: absolute;
     width: 1.5rem;
+    margin: 0;
     cursor: default;
     text-align: center;
     transition: all 0.1s ease 0s;

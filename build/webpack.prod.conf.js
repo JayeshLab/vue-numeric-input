@@ -27,6 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
+    publicPath: '',
     filename: utils.assetsPath('js/[name].js'),
     chunkFilename: utils.assetsPath('js/[id].js')
   },
