@@ -20,6 +20,7 @@
       :readonly="readonly"
     >
       <button
+        type="button"
         v-if="controls"
         class="btn btn-decrement"
         @mousedown="start(decrement)"
@@ -30,6 +31,7 @@
         <i class="btn-icon"></i>
       </button>
       <button
+        type="button"
         v-if="controls"
         class="btn btn-increment"
         @mousedown="start(increment)"
