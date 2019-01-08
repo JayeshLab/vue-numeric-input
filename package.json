@@ -1,6 +1,6 @@
 {
   "name": "vue-numeric-input",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Vue Numeric Input Component",
   "author": "JayeshLab <helloiamjayesh@gmail.com>",
   "license": "MIT",
@@ -93,7 +93,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^2.9.1",
+    "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
