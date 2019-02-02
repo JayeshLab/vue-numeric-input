@@ -169,13 +169,13 @@ export default {
      * Handle value on Input
      */
     inputHandler (val) {
-      this.updateValue(this.toNumber(val))
+      this.updateValue(this.toNumber(val), val)
     },
     /**
      * Update value on operation performed
      * @param val
      */
-    updateValue: function (val) {
+    updateValue: function (val, strVal = null) {
       const oldVal = this.numericValue
       val = this.toPrecision(val, this.precision)
       if (val >= this.max) {
@@ -185,7 +185,7 @@ export default {
         val = this.min
       }
       if (val === oldVal) {
-        this.$refs.input.value = val
+        this.$refs.input.value = strVal && val === this.toNumber(strVal) ? strVal : val
         return
       }
       this.numericValue = val
