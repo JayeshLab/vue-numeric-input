@@ -16,7 +16,13 @@
     </style>
   </head>
   <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+    <div id="app">
+    	<p>{{item}}</p>
+    	<button @click="incre">Add</button>
+    	<button @click="decre" v-if="item>0">Minus</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	 <script src="index.js"> 
+	 </script>
   </body>
 </html>
