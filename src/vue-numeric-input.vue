@@ -24,8 +24,8 @@
         v-if="controls"
         class="btn btn-decrement"
         @mousedown="start(decrement)"
-        @touchstart.native.prevent="start(decrement)"
-        @touchend.native.prevent="stop"
+        @touchstart="$event.preventDefault(); start(decrement)"
+        @touchend="$event.preventDefault(); stop($event)"
         :disabled="disabled || numericValue <= min"
       >
         <i class="btn-icon"></i>
@@ -35,8 +35,8 @@
         v-if="controls"
         class="btn btn-increment"
         @mousedown="start(increment)"
-        @touchstart.native.prevent="start(increment)"
-        @touchend.native.prevent="stop"
+        @touchstart="$event.preventDefault(); start(increment)"
+        @touchend="$event.preventDefault(); stop($event)"
         :disabled="disabled || numericValue >= max"
       >
         <i class="btn-icon"></i>
