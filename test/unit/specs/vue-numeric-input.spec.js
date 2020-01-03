@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-expressions, vue/no-dupe-keys */
 import Vue from 'vue'
 import VueNumericInput from '../../../src/vue-numeric-input.vue'
 import { triggerEvent, triggerClick } from '../util'
