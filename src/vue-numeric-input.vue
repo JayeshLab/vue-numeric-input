@@ -139,7 +139,7 @@ export default {
      */
     toNumber (val) {
       let num = parseFloat(val)
-      if (isNaN(val) || !isFinite(val)) {
+      if (isNaN(num) || !isFinite(num)) {
         num = 0
       }
       return num
