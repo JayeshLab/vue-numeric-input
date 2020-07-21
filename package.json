@@ -44,7 +44,7 @@
     "chai": "4.1.2",
     "chalk": "2.0.1",
     "clean-webpack-plugin": "0.1.19",
-    "codecov": "3.0.4",
+    "codecov": "3.7.1",
     "copy-webpack-plugin": "4.0.1",
     "cross-env": "5.0.1",
     "css-loader": "3.2.0",
