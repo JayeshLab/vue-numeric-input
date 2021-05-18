@@ -15,6 +15,8 @@
       @change="onChange"
       @blur="onBlur"
       @focus="onFocus"
+      @paste="onPaste"
+      @drop.prevent
       :autofocus="autofocus"
       :disabled="disabled"
       :readonly="readonly"
@@ -45,6 +47,16 @@
 </template>
 <script>
 const timeInterval = 100
+
+const isNaN = Number.isNaN || window.isNaN
+const REGEXP_NUMBER = /^-?(?:\d+|\d+\.\d+|\.\d+)(?:[eE][-+]?\d+)?$/
+const REGEXP_DECIMALS = /\.\d*(?:0|9){10}\d*$/
+const normalizeDecimalNumber = (value, times = 100000000000) =>
+  REGEXP_DECIMALS.test(String(value)) ? Math.round(value * times) / times : value
+
+const round = (number, decimals = 2) => {
+  return Math.round(number * Math.pow(10, decimals)) / Math.pow(10, decimals)
+}
 
 export default {
   name: 'vue-numeric-input',
@@ -151,19 +163,23 @@ export default {
      * @returns {number | Number}
      */
     toPrecision (val, precision) {
-      return precision !== undefined ? parseFloat(val.toFixed(precision)) : val
+      return precision !== undefined ? round(val, precision) : val
     },
     /**
      * Increment the current numeric value
      */
     increment () {
-      if (!this.readonly) this.updateValue(this.toNumber(this.numericValue) + this.step)
+      if (this.readonly || this.disabled) return
+      const newValue = this.toNumber(this.internalValue) + this.step
+      this.updateValue(normalizeDecimalNumber(newValue))
     },
     /**
      * Decrement the current numeric value
      */
     decrement () {
-      if (!this.readonly) this.updateValue(this.toNumber(this.numericValue) - this.step)
+      if (this.readonly || this.disabled) return
+      const newValue = this.toNumber(this.internalValue) - this.step
+      this.updateValue(normalizeDecimalNumber(newValue))
     },
     /**
      * Handle value on Input
@@ -186,6 +202,9 @@ export default {
       }
       if (val === oldVal) {
         this.$refs.input.value = strVal && val === this.toNumber(strVal) ? strVal : val
+        return
+      }
+      if (isNaN(val)) {
         return
       }
       this.numericValue = val
@@ -216,6 +235,13 @@ export default {
       this.handler = null
       this.startTime = null
       if (this.value !== this.numericValue) this.$emit('change', this.numericValue)
+    },
+    
+    onPaste(event) {
+      const clipboardData = event.clipboardData || window.clipboardData
+      if (clipboardData && !REGEXP_NUMBER.test(clipboardData.getData("text"))) {
+        event.preventDefault()
+      }
     },
     /**
      * On blur event trigger
