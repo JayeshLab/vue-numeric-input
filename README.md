@@ -82,13 +82,17 @@ export default {
 |  max             |  Maximum allowed value      | Number        |   Infinity   |      -          |
 |  step            |  Incremental Step           | Number        |      1       |      -          |
 |  align           |  Alignment of Numeric Value | String        |     left     | left, center, right |
-|  size            |  Component Size             | String        |   Inherit    | size in px, em, rem etc e.g. '20px'          |
+|  width           |  Component Width             | String        |   150px     | width in px, em, rem etc e.g. ‘20px’ |
+|  size            |  Component Size             | String        |   normal     | size value can be 'small', 'normal', 'large' |
 |  precision       |  Number of decimals         | Number        |      0       |   Integer value|
 |  controls        |  Enable/Disable Controls    | Boolean       |    true      |   true/false|
 |  controlsType    |  Controls Type              | String        |  plusminus   |   plusminus/updown|
 |  autofocus       |  Autofocus on Page Load     | Boolean       |    false     |   true/false|
 |  readonly        |  Is Readonly                | Boolean       |    false     |   true/false|
 |  disabled        |  Is Disabled                | Boolean       |    false     |   true/false|
+|  isinput        |  enable/disable keyboard input of number | Boolean  |    false      |   true/false|
+|  mousewheel      |  Enable increment/decrement with mousewheel event  | Boolean       |    false     |   true/false|
+|  className       |  Css Class for Input Component | String        |   -     | css class name |
 
 
 #### EVENTS:

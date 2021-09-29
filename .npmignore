@@ -4,10 +4,9 @@ docs
 node_modules
 static
 .babelrc
-.editorconfig
+.browserslistrc
 .gitignore
-.eslingrc.js
-.postcssrc.js
+.eslintignore
 package-lock.json
 *.iml
 .idea

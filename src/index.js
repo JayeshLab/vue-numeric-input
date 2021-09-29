@@ -1,7 +1,7 @@
 import VueNumericInput from './vue-numeric-input.vue'
 
 const plugin = {
-  install (Vue, options) {
+  install (Vue) {
     Vue.component(VueNumericInput.name, VueNumericInput)
   }
 }
