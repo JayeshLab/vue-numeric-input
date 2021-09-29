@@ -5,7 +5,6 @@ install:
   - npm install
 script:
   - npm run lint
+  - npm run lib
   - npm run build:docs
-  - npm run release
-  - npm test
-  - codecov
+  - npm run test:unit

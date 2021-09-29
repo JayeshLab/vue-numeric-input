@@ -380,19 +380,6 @@ export default {
   }
 };
 </script>
-<style scoped>
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-button:focus {
-  outline: none;
-}
-</style>
 <style>
 .vue-numeric-input {
   position: relative;
@@ -424,6 +411,11 @@ button:focus {
   line-height: 1.8rem;
   transition: all 0.1s ease 0s;
   width: 100%;
+  -moz-appearance: textfield !important;
+}
+.numeric-input::-webkit-inner-spin-button, .numeric-input::-webkit-outer-spin-button  {
+   -webkit-appearance: none !important;
+   margin: 0 !important;
 }
 .vue-numeric-input .numeric-input:focus {
   outline: none;
@@ -441,6 +433,9 @@ button:focus {
   border: solid rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 3px inset,
     rgba(255, 255, 255, 0.7) 1px 1px 3px inset;
+}
+.vue-numeric-input button:focus {
+  outline: none !important;
 }
 .vue-numeric-input.small button {
   width: 20px;
