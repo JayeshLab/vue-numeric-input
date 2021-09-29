@@ -7,7 +7,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit --watchAll --testTimeout=60000",
+    "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "build:docs": "vue-cli-service build --dest docs --name vue-numeric-input src/main.js",
     "lib": "vue-cli-service build --target lib --name vue-numeric-input src/index.js"
