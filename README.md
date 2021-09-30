@@ -2,8 +2,8 @@
 
 [![npm](https://img.shields.io/npm/v/vue-numeric-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-numeric-input)
 [![npm](https://img.shields.io/npm/dt/vue-numeric-input.svg?style=flat-square)](https://www.npmjs.com/package/vue-numeric-input)
-[![Build Status](https://travis-ci.org/JayeshLab/vue-numeric-input.svg?branch=master)](https://travis-ci.org/JayeshLab/vue-numeric-input)
-[![codecov](https://codecov.io/gh/JayeshLab/vue-numeric-input/branch/master/graph/badge.svg)](https://codecov.io/gh/JayeshLab/vue-numeric-input)
+[![Build Status](https://api.travis-ci.com/JayeshLab/vue3-resize-text.svg?branch=master)](https://app.travis-ci.com/github/JayeshLab/vue-numeric-input)
+[![codecov](https://codecov.io/gh/JayeshLab/vue-numeric-input/branch/master/graph/badge.svg?token=a4re2w3cGy)](https://codecov.io/gh/JayeshLab/vue-numeric-input)
 [![npm](https://img.shields.io/npm/l/vue-numeric-input.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 Number input component based on Vue that is a replacement of native input number with optional control.

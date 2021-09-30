@@ -8,3 +8,4 @@ script:
   - npm run lib
   - npm run build:docs
   - npm run test:unit
+  - npm run codecov
